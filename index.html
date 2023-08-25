@@ -4,61 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RS Development</title>
+    <title>Rebecca Shepherd Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-          <h1>RS Development</h1>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#projects">My Projects</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#footer">Contact</a></li>
-          </ul>
+    <section class="hero section #top">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-one">
+                    <h1>Hi, I'm <span>Rebecca</span>,</h1>
+                </div>
+                <div class="hero-two">
+                    <p>I make things for the web, and have a passion for software engineering, FinTech and Blockchain.</p>
+                </div>
+                </div>
+                <div class="image">
+                    <img src="./images/image1.jpg" width="300"alt="professional-image">
+                </div>
+                
+                <button class="hero-button">
+                    <a href="#about">Get To Know Me</a>
+                </button>
         </div>
-      </div>
-      <div class="jumbotron">
-        <div class="container">
-          <h2>This is a space for me to showcase <span>my amazing skills</span> in web developement and web technologies.</h2>
-        </div>
-      </div>
-      <div class="banner">
-       <div class="container">
-            <h2>The Bottom Line.</h2>
-            <p>My summary</p>
-          </div>
-        <div class="container">
-          <h2 id="skills">My Skills</h2>
-          <div class="main">
-            <div class="spacer">
-              <div class="cards">
-                <div class="column">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/AnantP%40html.png" alt="html logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Working_Together_Teamwork_Puzzle_Concept.jpg" alt="teamwork">
-                  </div>
-                  <div class="column">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="css logo">
-                    <img src="https://www.publicdomainpictures.net/pictures/340000/velka/seo-idea-seo-search-engine-optimization-on-crumpled-paper-1589994521IXu.jpg" alt="seo">
-                    <img src="https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png" alt="mysql logo">
-                    </div>
-                    <div class="column">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="javascript logo">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Microsoft_Office_logo_%282013%E2%80%932019%29.png" alt="office logo">
-                      <img src="https://seeklogo.com/images/S/scratch-cat-logo-7F652C6253-seeklogo.com.png" alt="scratch logo">
-                      <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="node logo">
-                  </div>
-              </div>
+    </section>
+    <header class="header" id="header">
+        <nav class="link-container">
+            <button><a href="#about">ABOUT</a></button>
+            <button><a href="#experience">EXPERIENCE</a></button>
+            <button><a href="#projects">PROJECTS</a></button>
+            <button><a href="#contact">CONTACT</a></button>
+        </nav>
+    </header>
+
+    <section class="about section" id="about">
+        
+        <h2>ABOUT</h2>
+        <hr class="line">
+        <div class="about-section">
+            <div class="profile container">
+                <p>This is the main bit about myself, my passion, my interests, etc.</p>
+                <p>Perhaps another paragraph about how I am currently studying a degree in Computing and IT with the OU</p>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="footer">
-        <h3>RS Development</h3>
-        <p>contact address line 1</p>
-        <p>contact address line 2</p>
-        <p>contact number</p>
-      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+        <h2>EXPERIENCE</h2>
+        <hr class="line">
+        <div class="experience-section">
+            <div class="column col-one">
+                <div class="tech-icon">
+                    <i class="devicon-html5-plain colored icon"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-react-plain colored icon"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-mongodb-plain colored icon"></i>
+                </div>
+                
+            </div>
+            <div class="column col-two">
+                <div class="tech-icon">
+                    <i class="devicon-css3-plain colored icon"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-nodejs-plain colored icon"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-jest-plain colored icon"></i>
+                </div>
+                
+            </div>
+            <div class="column col-three">
+                <div class="tech-icon">
+                    <i class="devicon-javascript-plain colored icon"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-python-plain colored icon"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-git-plain colored icon"></i>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    
+<section class="projects section" id="projects">
+        <h2>PROJECTS</h2>
+        <hr class="line">
+        <div class="section-center">  
+        </div>
+        </div>
+</section>
+
+<section class="cv section">
+    <h2>CV</h2>
+    <hr class="line">
+    <div class="cv-section">
+    <button class="cv-button">
+        <a class="cv-link"><i class="fas fa-paper-plane"></i></a>
+    </button>
+    </div>
+</section>
+
+
+<section class="contact section">
+
+    <h2>Contact</h2>
+    <hr class="line">
+
+    <h4>Get In Touch</h4>
+    <div class="contact-section" id="contact">
+        
+        <a class="contact-icons" href="https://www.linkedin.com/in/rebecca-shepherd-26b065216">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="contact-icons" href="https://github.com/becks-tech">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="contact-icons" href="mailto:techybecky21@gmail.com">
+            <i class="fa fa-envelope"></i>
+        </a>
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <hr class="line">
+        <button class="top-button">
+            <a href="#top" class="cv-link"><i class="fas fa-arrow-up"></i></a>
+            Back To Top
+        </button>
+        <p>© Rebecca Shepherd 2023</p>
+    </footer>
+
 </body>
 </html>
