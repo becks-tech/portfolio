@@ -24,7 +24,8 @@ const projects = [
     desc: 'A web app that utlizes the Techy API: https://techy-api.vercel.app/api/text. Skills used were HTML, CSS, Flexbox, JavaScript, Fetch API.',
     live: 'https://becks-tech.github.io/tech-api/',
     repo: 'https://github.com/becks-tech/tech-api/'
-  }
+  },
+  
 ]
 
 // Projects loop
