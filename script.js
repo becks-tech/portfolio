@@ -68,29 +68,20 @@ function displayProjectItems(projectItems){
 
 
 // Sticky Header
-
-window.onscroll = function() {myFunction()};
         
 const header = document.getElementById("header");
 const sticky = header.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
+  if (window.scrollY > sticky) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
 }
 
+window.onscroll = function() {myFunction()};
+document.onscroll = function() {myFunction()};
+
 
 // Header buttons highlight
-
-//
-
-// CV Button
-
-const cvButton = document.querySelector('.cv-button')
-
-cvButton.addEventListener('click', ()=>{
-  alert('CV Coming Soon')
-})
