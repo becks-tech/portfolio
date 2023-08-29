@@ -7,6 +7,8 @@
   --light-gray: #686767;
 }
 
+/*GLOBAL*/
+
 *{
     margin:0;
     padding: 0;
@@ -33,7 +35,6 @@ span{
 .contact-link{
   color: var(--salmon-color);
 }
-
 
 
 @media screen and (min-width: 550px) {
@@ -323,12 +324,8 @@ h2{
 
 @media screen and (max-width: 550px){
   html, body{
-    width: 100%;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
     overflow-x: hidden;
-}
+  }
 
   /*HERO SECTION*/
   .hero{
@@ -355,11 +352,11 @@ h2{
     max-width: 50%;
   }
   .hero-button{
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0.50rem;
     border: 2px solid var(--salmon-color);
     background: transparent;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
   }
   
@@ -378,16 +375,15 @@ h2{
   /*HEADER*/
 
   .header{
-    
     height: 80px;
-    background-color: var(--navy-color);
+    background-color: var(--medium-gray);
     width: 100%;
     display: flex;
     justify-content: center;
     z-index: 1;
   }
   .link-container button{
-    visibility: hidden;
+
     background: transparent;
     border: none;
     height: 80px;
@@ -402,7 +398,6 @@ h2{
   
   .link-container button:hover{
     background-color: var(--light-gray);
-    
   }
     
   .sticky {
@@ -418,17 +413,16 @@ h2{
   /*ABOUT SECTION*/
 
   .about-section{
-    padding: 30px;
-    
-    
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   .profile{
     color: var(--platinum-color);
     font-size: 1.15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    
   }
 
   /*EXPERIENCE SECTION*/
@@ -438,6 +432,7 @@ h2{
     display: flex;
     justify-content: center;
     height: 90vh;
+    
   }
   
   .tech-icon{
@@ -486,7 +481,6 @@ h2{
   h2{
     color: var(--platinum-color);
     text-align: center;
-    padding: 1.0rem;
   }
   .line{
     border-top: 3px solid var(--salmon-color);
@@ -501,7 +495,6 @@ h2{
       height: 100%;
 
     }
-  
     .project-buttons button{
       margin-top: 2rem;
       padding: 0.50rem;
@@ -522,20 +515,19 @@ h2{
     }
   
     .contact, .cv{
-      min-height: 25vh;
+      min-height: 15vh;
       background-color: var(--navy-color);
       width: 100vw;
     }
   
     .cv-section{
-      height: 20vh;
       display: flex;
       justify-content: center;
       align-items: center;
     }
   
     .cv-button{
-      height: 3.5rem;
+    
       width: 8rem;
       font-size: 35px;
       border: none;
@@ -544,7 +536,7 @@ h2{
     }
     .cv-button a{
       color: var(--navy-color);
-      padding-top: 8px;
+      
       width: 100%;
       height: 100%;
       text-align: center;
