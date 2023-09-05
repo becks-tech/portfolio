@@ -1,9 +1,29 @@
+// Greeting
+function greeting(){
+  let hour = new Date().getHours();
+  if (hour < 12){
+    greeting = "Good Morning"
+    const para = document.querySelector(".greeting");
+    para.style.color="#FFBF00";
+  } else if (hour <19){
+    greeting = "Good Afternoon"
+    const para = document.querySelector(".greeting");
+    para.style.color="#58ACFA";
+  } else {
+    greeting = "Good Evening"
+    const para = document.querySelector(".greeting");
+    para.style.color="#088A4B";
+  }
+  document.querySelector("p").textContent = greeting;
+  }
+  greeting();
+
 const projects = [
   {
     id: 1,
     title: 'Etch-A-Sketch',
     image: './images/project-1-etch.jpg',
-    desc: 'This is an Etch-a-sketch I built using HTML5, CSS, Vanilla JavaScript.',
+    desc: 'This is an Etch-a-sketch I built using HTML5, CSS3, Vanilla JavaScript.',
     live: 'https://becks-tech.github.io/etch-a-sketch/',
     repo: 'https://github.com/becks-tech/etch-a-sketch'
 
@@ -12,7 +32,7 @@ const projects = [
     id: 2,
     title: 'Rock Paper Scissors',
     image: './images/project-2-rps.jpg',
-    desc: 'My take on the classic game that is Rock Paper Scissors. Built using HTML, CSS and Vanilla JavaScript.',
+    desc: 'My take on the classic game that is Rock Paper Scissors. Built using HTML5, CSS3 and Vanilla JavaScript.',
     live: 'https://becks-tech.github.io/rock-paper-scissors/',
     repo: 'https://github.com/becks-tech/rock-paper-scissors/'
 
@@ -21,7 +41,7 @@ const projects = [
     id: 3,
     title: 'Techy API',
     image: './images/project-3-tech.jpg',
-    desc: 'A web app that utlizes the Techy API: https://techy-api.vercel.app/api/text. Skills used were HTML, CSS, Flexbox, JavaScript, Fetch API.',
+    desc: 'A web app that utlizes the Techy API: https://techy-api.vercel.app/api/text. Skills used were HTML5, CSS3, Flexbox, Vanilla JavaScript, Fetch API.',
     live: 'https://becks-tech.github.io/tech-api/',
     repo: 'https://github.com/becks-tech/tech-api/'
   },
@@ -84,4 +104,11 @@ window.onscroll = function() {myFunction()};
 document.onscroll = function() {myFunction()};
 
 
-// Header buttons highlight
+// Theme
+ const setTheme = () => {
+  const root = document.documentElement;
+  const newTheme = root.className === 'light' ? 'dark' : 'light';
+  root.className = newTheme;
+ }
+ document.querySelector('input').addEventListener('click', setTheme)
+

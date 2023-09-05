@@ -3,8 +3,21 @@
   --navy-color: #242b64;
   --salmon-color: #fa8072;
   --platinum-color: #e5e4e2;
-  --medium-gray: #525252;
-  --light-gray: #686767;
+  --dark-gray: #525252;
+  --medium-gray: #696969;
+  --light-gray: #a3a3a3;
+}
+
+:root.dark {
+  --border-button: 3px solid var(--salmon-color);
+  --bg-color: #242b64;
+  --text-color: #e5e4e2;
+}
+
+:root.light {
+  --border-button: 3px solid #242b64;
+  --bg-color: #e5e4e2;
+  --text-color: #242b64;
 }
 
 /*GLOBAL*/
@@ -22,13 +35,64 @@ body{
 .section:not(.contact, .cv){
   min-height: 90vh;
   width: 100vw;
-  background-color: var(--navy-color)
+  background-color: var(--bg-color)
 }
 button{
   cursor: pointer;
   border-radius: 4px;
 }
 
+
+
+/* TOGGLE THEME SLIDER */
+.switch{
+  position:fixed;
+  display:inline-block;
+  width: 60px;
+  height: 34px;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+.switch input{
+  opacity:0;
+  height:0;
+  width:0;
+}
+.slider{
+  position:absolute;
+  cursor:pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark-gray);
+  border-radius: 34px;
+  -webkit-transition: .4s;
+  transition: .4s
+}
+.slider:before{
+  position: absolute;
+  content:"";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color:white;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider{
+  background-color: var(--light-gray);
+}
+input:focus + .slider{
+  box-shadow: 10 20 30px cyan;
+}
+input:checked + .slider:before{
+  -webkit-transform:translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
 span{
   color: var(--salmon-color)
 }
@@ -38,32 +102,43 @@ span{
 
 
 @media screen and (min-width: 550px) {
+  /*GREETING*/
+  .greeting{
+    font-size: 2rem;
+    position:fixed;
+    display:inline-block;
+    width: 20%;
+    height: 34px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
   .hero{
     height: 91.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--platinum-color)
+    color: var(--text-color)
   }
   .hero-one{
     font-size: 3rem;
-    padding: 15px;
+    padding-bottom: 1.5rem;
   }
   .hero-two{
     padding-bottom: 30px;
     font-size: 1.75rem;
-    font-weight: 600;
+    font-weight: 500;
     width: 30rem;
   }
   .image > img{
     border-radius: 80%;
-    border: 2px solid var(--salmon-color);
+    border: 3px solid var(--salmon-color)
   }
   .hero-button{
     margin-top: 40px;
     padding: 0.50rem;
-    border: 2px solid var(--salmon-color);
+    border: 3px solid var(--salmon-color);
     background: transparent;
     font-size: 1.5rem;
     font-weight: 500;
@@ -77,15 +152,15 @@ span{
   
   .hero-button a{
     text-decoration: none;
-    color:var(--platinum-color)
+    color:var(--text-color)
   }
   
   .header{
     height: 80px;
-    background-color: var(--medium-gray);
+    background-color: var(--dark-gray);
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     z-index: 1;
   }
   .link-container button{
@@ -96,13 +171,13 @@ span{
   }
   .link-container a{
     text-decoration: none;
+    padding: 1.5rem;
     font-size: 1rem;
-    padding: 15px;
     color: var(--salmon-color);
   }
   
   .link-container button:hover{
-    background-color: var(--light-gray);
+    background-color: var(--medium-gray);
     
   }
   
@@ -116,8 +191,8 @@ span{
   }
   .profile{
     width: 1000px;
-    color: var(--platinum-color);
-    font-size: 1.5rem;
+    color: var(--text-color);
+    font-size: 2rem;
   }
   /*Experience Section*/
   
@@ -160,7 +235,7 @@ span{
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
-    color: var(--platinum-color);
+    color: var(--text-color);
     font-size: 30px;
   }
   
@@ -180,7 +255,7 @@ span{
 } 
 
 h2{
-  color: var(--platinum-color);
+  color: var(--text-color);
   text-align: center;
   padding: 1.0rem;
 }
@@ -190,7 +265,7 @@ h2{
 }
 
   .project-text{
-    color: var(--platinum-color);
+    color: var(--text-color);
     font-size: 25px;
     width: 33rem;
     max-height: 6rem;
@@ -206,13 +281,23 @@ h2{
   }
   .project-buttons button:hover{
     background-color: var(--salmon-color) ;
-    color: var(--platinum-color);
+    color: var(--text-color);
     transition: 0.25s ease-in-out;
   }
 
   .project-buttons a{
-    color: var(--platinum-color);
+    color: var(--text-color);
     text-decoration: none;
+  }
+  .coming-soon{
+    width: inherit;
+    height: 100%;
+  
+
+  }
+  .coming-soon > .project-text{
+    margin: 0 auto;
+    font-size: 1.5rem;
   }
 
 .sticky {
@@ -227,7 +312,7 @@ h2{
 
   .contact, .cv{
     min-height: 25vh;
-    background-color: var(--navy-color);
+    background-color: var(--bg-color);
     width: 100vw;
   }
 
@@ -244,10 +329,10 @@ h2{
     font-size: 35px;
     border: none;
     border-radius: 5px;
-    background-color: var(--platinum-color);
+    background-color: var(--text-color);
   }
   .cv-button a{
-    color: var(--navy-color);
+    color: var(--bg-color);
     padding-top: 8px;
     width: 100%;
     height: 100%;
@@ -259,7 +344,7 @@ h2{
     transition: 0.25s ease-in-out;
   }
   .cv-button a:hover{
-    color: var(--platinum-color);
+    color: var(--text-color);
 
   }
 
@@ -274,9 +359,11 @@ h2{
   margin: 2% auto;
   border: none;
   border-radius: 5px;
+  background-color: var(--text-color);
+  color: var(--bg-color)
 }
 .top-button a{
-  color: var(--navy-color);
+  color: var(--bg-color);
   width: 100%;
   height: 100%;
 }
@@ -287,25 +374,25 @@ h2{
   
 }
 .top-button a:hover{
-  color: var(--platinum-color);
+  color: var(--salmon-color);
 }
 
 .contact-section{
   height: 15vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .contact h4{
-  color: var(--platinum-color);
+  color: var(--text-color);
   text-align: center;
   margin-top: 20px;
   font-size: 18px;
 }
 .contact-icons{
   font-size: 4rem;
-  color: var(--platinum-color);
+  color: var(--text-color);
 }
 
 .contact-icons:hover{
@@ -313,18 +400,31 @@ h2{
 }
 
 .footer{
-  background-color: var(--navy-color);
+  background-color: var(--bg-color);
 }
 .footer p{
-  color: var(--platinum-color);
+  color: var(--text-color);
   font-size: 20px;
   padding-top: 20px;
   text-align: center;
 }
 
+/*MOBILE VIEW*/
+
 @media screen and (max-width: 550px){
   html, body{
     overflow-x: hidden;
+  }
+
+  /*GREETING*/
+  .greeting{
+    font-size: 1rem;
+    position:absolute;
+    display:inline-block;
+    margin: 0 auto;
+    height: 34px;
+    top: 1rem;
+    right: 8rem;
   }
 
   /*HERO SECTION*/
@@ -334,7 +434,7 @@ h2{
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--platinum-color)
+    color: var(--text-color)
   }
   .hero-one{
     font-size: 1.75rem;
@@ -352,7 +452,7 @@ h2{
     max-width: 50%;
   }
   .hero-button{
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0.50rem;
     border: 2px solid var(--salmon-color);
     background: transparent;
@@ -368,7 +468,7 @@ h2{
   
   .hero-button a{
     text-decoration: none;
-    color:var(--platinum-color)
+    color:var(--text-color)
   }
 
 
@@ -376,7 +476,7 @@ h2{
 
   .header{
     height: 80px;
-    background-color: var(--medium-gray);
+    background-color: var(--dark-gray);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -397,7 +497,7 @@ h2{
   }
   
   .link-container button:hover{
-    background-color: var(--light-gray);
+    background-color: var(--medium-gray);
   }
     
   .sticky {
@@ -420,7 +520,7 @@ h2{
     flex-direction: column;
   }
   .profile{
-    color: var(--platinum-color);
+    color: var(--text-color);
     font-size: 1.15rem;
     
   }
@@ -468,7 +568,7 @@ h2{
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
-    color: var(--platinum-color);
+    color: var(--text-color);
     font-size: 30px;
   }
   
@@ -479,7 +579,7 @@ h2{
     max-width: 100%;
   }
   h2{
-    color: var(--platinum-color);
+    color: var(--text-color);
     text-align: center;
   }
   .line{
@@ -488,7 +588,7 @@ h2{
   }
   
     .project-text{
-      color: var(--platinum-color);
+      color: var(--text-color);
       padding-top: 10px;
       font-size: 20px;
       width: 90%;
@@ -510,7 +610,7 @@ h2{
     }
   
     .project-buttons a{
-      color: var(--platinum-color);
+      color: var(--text-color);
       text-decoration: none;
     }
 
@@ -520,7 +620,7 @@ h2{
   
     .contact, .cv{
       min-height: 15vh;
-      background-color: var(--navy-color);
+      background-color: var(--bg-color);
       width: 100vw;
     }
   
@@ -536,10 +636,10 @@ h2{
       font-size: 35px;
       border: none;
       border-radius: 5px;
-      background-color: var(--platinum-color);
+      background-color: var(--bg-color);
     }
     .cv-button a{
-      color: var(--navy-color);
+      color: var(--text-color);
       
       width: 100%;
       height: 100%;
@@ -551,7 +651,7 @@ h2{
       transition: 0.25s ease-in-out;
     }
     .cv-button a:hover{
-      color: var(--platinum-color);
+      color: var(--bg-color);
   
     }
   
@@ -568,7 +668,7 @@ h2{
     border-radius: 5px;
   }
   .top-button a{
-    color: var(--navy-color);
+    color: var(--text-color);
     width: inherit;
     height: inherit;
   }
@@ -579,7 +679,7 @@ h2{
     
   }
   .top-button a:hover{
-    color: var(--platinum-color);
+    color: var(--text-color);
   }
   
   .contact-section{
@@ -591,14 +691,14 @@ h2{
   }
   
   .contact h4{
-    color: var(--platinum-color);
+    color: var(--text-color);
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
   }
   .contact-icons{
     font-size: 2rem;
-    color: var(--platinum-color);
+    color: var(--text-color);
   }
   
   .contact-icons:hover{
