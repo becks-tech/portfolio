@@ -45,6 +45,14 @@ const projects = [
     live: 'https://becks-tech.github.io/tech-api/',
     repo: 'https://github.com/becks-tech/tech-api/'
   },
+  {
+    id: 4,
+    title: 'Password Generator',
+    image: './images/project-4-password.jpg',
+    desc: 'A password generator, user determines length, given strength and can copy to clipboard.',
+    live: 'https://becks-tech.github.io/password-generator/',
+    repo: 'https://github.com/becks-tech/password-generator'
+  },
   
 ]
 
