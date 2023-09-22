@@ -22,9 +22,16 @@
 </head>
 <body>
     <main>
-    <section class="hero section" id="top">
-        <div class="hero-section">
 
+        <header class="header" id="header">
+            <nav class="link-container">
+                <button><a href="#about">ABOUT</a></button>
+                <button><a href="#projects">PROJECTS</a></button>
+                <button><a href="#experience">EXPERIENCE</a></button>
+                <button><a href="#contact">CONTACT</a></button>
+                
+            </nav>
+            
             <div class="greeting-container">
                 <p class="greeting"></p>
             </div>
@@ -34,92 +41,51 @@
                     <span class="slider"></span>
                   </label> 
             </div>
+        </header>
+    <section class="hero section" id="top">
+        <div class="hero-section">
+
             <div class="hero-content">
                 <div class="hero-one">
                     <h1>Hi, I'm <span>Rebecca</span>,</h1>
                 </div>
                 <div class="hero-two">
-                    <p>I make things for the web, and have a passion for software engineering, FinTech and Blockchain.</p>
+                    <p>I make things for the web, and have a passion for web development, UX design and software engineering.</p>
                 </div>
-                </div>
-                <div class="image">
-                    <img src="./images/image1.jpg" width="300"alt="professional-image">
                 </div>
                 
+                
                 <button class="hero-button">
-                    <a href="#about">Get To Know Me <i class="fa fa-arrow-down arrow-down"></i></a>
+                    <a href="#projects">Previous Projects <i class="fa fa-arrow-down arrow-down"></i></a>
                 </button>
         </div>
     </section>
-    <header class="header" id="header">
-        <nav class="link-container">
-            <button><a href="#about">ABOUT</a></button>
-            <button><a href="#experience">EXPERIENCE</a></button>
-            <button><a href="#projects">PROJECTS</a></button>
-            <button><a href="#contact">CONTACT</a></button>
-        </nav>
-        
-        
-    </header>
 
     <section class="about section" id="about">
         
         <h2>ABOUT</h2>
         <hr class="line">
         <div class="about-section">
-            <div class="profile container">
-                <p>My name is Rebecca Shepherd and I have a passion for web development, UX design, software engineering, FinTech and Blockchain.</p>
-                <br>
+            <div class="image">
+                <img src="./images/image1.jpg" width="300"alt="professional-image">
+            </div>
+           
+            <div class="profile-container">
+                <h2>About Me</h2>
+                <p>My name is Rebecca Shepherd and I have a passion for web development, UX design and software engineering.</p>
+                
                 <p>I am currently a Computing and IT Undergraduate at The Open University. Alongside this, I enjoy building apps to learn new skills as well as having fun solving problems.</p>
-                <br>
+                
                 <p>When I am away from my keyboard, I enjoy playing guitar, riding my bike and playing card games.</p>
-                <br>
-                <p>I am always interested in a challenge. Get in touch <a class="contact-link" href="#contact">here</a> to connect!</p>
-        
-            </div>
-        </div>
-    </section>
-
-    <section class="experience section" id="experience">
-        <h2>EXPERIENCE</h2>
-        <hr class="line">
-        <div class="experience-section">
-            <div class="column col-one">
-                <div class="tech-icon">
-                    <i class="devicon-html5-plain colored icon"></i>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-react-plain colored icon"></i>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-mongodb-plain colored icon"></i>
-                </div>
+                
+                <p>I am always interested in a challenge.</p>
+                
+                <button class="cv-button">
+                    <a class="cv-link" href="./images/REBECCA_SHEPHERD_CV.pdf">CV</a>
+                </button>
                 
             </div>
-            <div class="column col-two">
-                <div class="tech-icon">
-                    <i class="devicon-css3-plain colored icon"></i>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-nodejs-plain colored icon"></i>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-jest-plain colored icon"></i>
-                </div>
-                
-            </div>
-            <div class="column col-three">
-                <div class="tech-icon">
-                    <i class="devicon-javascript-plain colored icon"></i>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-python-plain colored icon"></i>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-git-plain colored icon"></i>
-                </div>
-                
-            </div>
+            
         </div>
     </section>
 
@@ -129,37 +95,66 @@
         <h2>PROJECTS</h2>
         <hr class="line">
         <div class="section-center">  
-        </div>
-        <div class="coming-soon">
-            <h2>Coming soon:</h2>
-        <p class="project-text">A NodeJS app that records birthdays. Users can login using their Google account to record birthdays.</p>
-        <br>
-        <p class="project-text">Built using: NodeJS, Mongoose, Express, Google Auth, Handlebars, Materialize.</p>
-        </div>
-        
-        
-        
-        
+        </div> 
         </div>
 </section>
 
-<section class="cv section">
-    <h2>CV</h2>
+<section class="experience section" id="experience">
+    <h2>EXPERIENCE</h2>
     <hr class="line">
-    <h2>Check out my CV below</h2>
-    <div class="cv-section">
-    <button class="cv-button">
-        <a class="cv-link" href="./images/REBECCA_SHEPHERD_CV.pdf"><i class="fas fa-paper-plane"></i></a>
-    </button>
+    <div class="experience-section">
+        <div class="column col-one">
+            <div class="tech-icon">
+                <i class="devicon-html5-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-nodejs-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-python-plain colored icon"></i>
+            </div>
+            
+        </div>
+        <div class="column col-two">
+            <div class="tech-icon">
+                <i class="devicon-css3-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-mongodb-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-java-plain colored icon"></i>
+            </div>
+            
+        </div>
+        <div class="column col-three">
+            <div class="tech-icon">
+                <i class="devicon-javascript-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-jest-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-vscode-plain colored icon"></i>
+            </div>
+        </div>
+        <div class="column col-four">
+            <div class="tech-icon">
+                <i class="devicon-react-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-git-plain colored icon"></i>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-figma-plain colored icon"></i>
+            </div>
     </div>
 </section>
 
-
 <section class="contact section">
-
     <h2>Contact</h2>
     <hr class="line">
-    <h2>Get in touch</h2>
+    <h2>Get in touch, I'd love to hear from you!</h2>
 
     <div class="contact-section" id="contact">
         

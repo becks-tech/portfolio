@@ -30,11 +30,11 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Rock Paper Scissors',
-    image: './images/project-2-rps.jpg',
-    desc: 'My take on the classic game that is Rock Paper Scissors. Built using HTML5, CSS3 and Vanilla JavaScript.',
-    live: 'https://becks-tech.github.io/rock-paper-scissors/',
-    repo: 'https://github.com/becks-tech/rock-paper-scissors/'
+    title: 'Signup Form',
+    image: './images/project-2-signup.jpg',
+    desc: 'This is my signup form, a timeless design with input validation. Built using HTML5, CSS3 and Vanilla JavaScript.',
+    live: 'https://becks-tech.github.io/signup-form/',
+    repo: 'https://github.com/becks-tech/signup-form'
 
   },
   {
@@ -82,7 +82,7 @@ function displayProjectItems(projectItems){
                     <a href="${item.live}">Live Site</a>
                 </button>
                 <button>
-                    <a href="${item.repo}">Repository</a>
+                    <a href="${item.repo}">Code</a>
                 </button>
             </div>
         </div>
